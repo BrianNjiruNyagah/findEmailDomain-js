@@ -1,0 +1,7 @@
+function findEmailDomain(address) {
+    let reg = address.match(/@(\w|\d|_|-|\.)+/g);
+    if(reg.length == 2){
+      return reg[1].replace(/@/,'');  
+    }
+    return reg[0].replace(/@/,'');
+}
